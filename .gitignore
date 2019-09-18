@@ -66,3 +66,4 @@ Client/run.bat
 Client/src/app/app.component.ts
 Client/src/app/app-routing.module.ts
 Client/src/app/app.module.ts
+/.vs/slnx.sqlite
