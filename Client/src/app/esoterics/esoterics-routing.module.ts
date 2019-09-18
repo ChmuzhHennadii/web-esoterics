@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProductListComponent } from './pages/products/product-list/product-list.component';
 
 const routes: Routes = [
+  { path: "", redirectTo: "goods" },
+
   {
-    path: '',
-    redirectTo: 'products' 
+    path: 'goods',
+    loadChildren: "./pages/goods/goods.module#GoodsModule"
   },
+
   {
-    path: 'products',
-    component: ProductListComponent
-    // loadChildren: './pages/products/products.module#ProductsModule'
+    path: 'users',
+    loadChildren: "./pages/users/users.module#UsersModule"
+  },
+
+  {
+    path: "orders",
+    loadChildren: "./pages/orders/ordres.module#OrdersModule"
   }
 ];
 
