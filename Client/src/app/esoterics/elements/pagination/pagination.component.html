@@ -1,0 +1,9 @@
+<ul class="pagination" *ngIf="totalCount > 1" >
+    <li><a (click)="onPageClicked(currentPage - 1)"><i class="fa fa-arrow-left"></i></a></li>
+
+    <li *ngFor="let i of (totalCount | times)" [class.active]="i == currentPage">
+        <a (click)="onPageClicked(i)">{{i}}</a>
+    </li>
+
+    <li><a (click)="onPageClicked(currentPage + 1)"><i class="fa fa-arrow-right"></i></a></li>
+</ul>
