@@ -1,2 +1,69 @@
+.DS_STORE
+
+/dist/
+/bazel-out
+/integration/bazel/bazel-*
+e2e_test.*
+node_modules
+tools/gulp-tasks/cldr/cldr-data/
+
+# Include when developing application packages.
+pubspec.lock
+.c9
+.idea/
+.devcontainer/*
+!.devcontainer/recommended-devcontainer.json
+!.devcontainer/recommended-Dockerfile
+.settings/
+.vscode/launch.json
+.vscode/settings.json
+*.swo
+modules/.settings
+modules/.vscode
+.vimrc
+.nvimrc
+
+# Don't check in secret files
+*secret.js
+
+# Ignore npm/yarn debug log
+npm-debug.log
+yarn-error.log
+
+# build-analytics
+.build-analytics
+
+# rollup-test output
+/modules/rollup-test/dist/
+
+# User specific bazel settings
+.bazelrc.user
+
+e2e/
+assets/
+environments/
+core/
+features/
+shared/
+Client/.angulardoc.json
+Client/README.md
 .angulardoc.json
+Client/CHANGELOG.md
+Client/package-lock.json
+Client/package.json
+Client/src/test.ts
+Client/src/typings.d.ts
+Client/src/tsconfig.spec.json
+Client/src/tsconfig.app.json
+Client/src/styles.css
+Client/src/polyfills.ts
+Client/src/karma.conf.js
+Client/src/main.ts
+Client/src/index.html
+Client/tsconfig.json
+Client/angular.json
 Client/run.bat
+Client/src/app/app.component.ts
+Client/src/app/app-routing.module.ts
+Client/src/app/app.module.ts
+/.vs/slnx.sqlite

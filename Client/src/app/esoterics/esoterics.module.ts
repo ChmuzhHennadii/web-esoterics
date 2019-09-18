@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { EsotericsRoutingModule } from './esoterics-routing.module';
-import { ProductsModule } from './pages/products/products.module';
+import { GoodsModule } from './pages/goods/goods.module';
 
 @NgModule({
   declarations: [],
@@ -10,7 +10,7 @@ import { ProductsModule } from './pages/products/products.module';
     CommonModule,
     EsotericsRoutingModule,
 
-    ProductsModule
+    GoodsModule
   ],
 })
 export class EsotericsModule { }
