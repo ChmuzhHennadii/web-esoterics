@@ -1,0 +1,24 @@
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" (click)="hiding.emit()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">{{modalTitle | i18n}}</h4>
+      </div>
+
+      <div class="modal-body">
+          <ng-content #content></ng-content>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-default" type="button" (click)="cancelling.emit()"> {{'Cancel' | i18n}} </button>
+        <button #confirmBtn class="btn btn-primary" type="button" (click)="confirmActivity = false; saving.emit()"> {{confirmName | i18n}} </button>
+      </div>
+
+    </div>
+  </div>
+</div>
