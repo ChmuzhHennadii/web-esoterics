@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PaginationComponent } from './pagination/pagination.component';
 import { InfrastructureModule } from '../infrastructure/infrastructure.module';
+import { GoodMiddleComponent } from './goods/good-middle/good-middle.component';
+import { GoodSmallComponent } from './goods/good-small/good-small.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [PaginationComponent],
+  declarations: [GoodMiddleComponent, GoodSmallComponent],
   imports: [
     CommonModule,
-    InfrastructureModule
+    InfrastructureModule,
+    RouterModule
   ],
-  exports: [PaginationComponent]
+  exports: [GoodMiddleComponent, GoodSmallComponent]
 })
 export class ElementsModule { }
