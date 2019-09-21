@@ -4,8 +4,8 @@ import { GoodComponent } from './good-info/good.component';
 import { GoodsComponent } from './goods/goods.component';
 
 const routes: Routes = [
-  { 
-    path: "",
+  {
+    path: '',
     component: GoodsComponent
   },
   {
