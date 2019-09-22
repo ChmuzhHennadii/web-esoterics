@@ -69,3 +69,4 @@ Client/src/app/app.module.ts
 /.vs/slnx.sqlite
 .vs/web-esoterics-project/v16/.suo
 .vs/VSWorkspaceState.json
+dist/
