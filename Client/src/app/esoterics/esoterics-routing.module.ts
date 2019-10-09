@@ -15,10 +15,10 @@ const routes: Routes = [
     loadChildren: "./pages/users/users.module#UsersModule"
   },
 
-  {
-    path: "orders",
-    loadChildren: "./pages/orders/ordres.module#OrdersModule"
-  },
+  // {
+  //   path: "orders",
+  //   loadChildren: "./pages/orders/ordres.module#OrdersModule"
+  // },
 
   {
     path: "**",

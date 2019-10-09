@@ -1,3 +1,19 @@
-<p>
-  goods works!
-</p>
+<div id="content">
+    
+    <sa-create-new text=""></sa-create-new>
+    
+    <div class="row" *ngIf="(goods$ | async) as goods">
+
+        <ng-container *ngFor="let good of goods; let i=index">
+
+            <ng-container *ngIf="shouldMiddle(i); else small">
+                <sa-good-middle [good]="good"></sa-good-middle>
+            </ng-container>
+            <ng-template #small>
+                <sa-good-small [good]="good"></sa-good-small>
+            </ng-template>
+
+        </ng-container>
+
+    </div>
+</div>
