@@ -5,10 +5,9 @@ import { GoodMiddleComponent } from './goods/good-middle/good-middle.component';
 import { GoodSmallComponent } from './goods/good-small/good-small.component';
 import { RouterModule } from '@angular/router';
 import { CreateNewComponent } from './create-new/create-new.component';
-import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
-  declarations: [PaginationComponent, ModalComponent],
+  declarations: [GoodMiddleComponent, GoodSmallComponent, CreateNewComponent],
   imports: [
     CommonModule,
     InfrastructureModule,
