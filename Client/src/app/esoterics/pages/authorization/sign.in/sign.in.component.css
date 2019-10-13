@@ -1,3 +1,7 @@
 #logo-group {
     width: 0;
 }
+
+.disabled {
+    cursor: default;
+}

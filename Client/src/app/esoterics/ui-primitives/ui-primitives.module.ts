@@ -6,6 +6,7 @@ import { InfrastructureModule } from '../infrastructure/infrastructure.module';
 import { ModalComponent } from './modal/modal.component';
 import { I18nModule } from '../../shared/i18n/i18n.module';
 import { ModalModule } from 'ngx-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ModalModule } from 'ngx-bootstrap';
     InfrastructureModule,
     I18nModule,
     ModalModule.forRoot(),
+    FormsModule
   ],
   exports: [
     PaginationComponent, 

@@ -1,9 +1,7 @@
-<form class="smart-form">
-
-      <label class="input">
-        <i [className]="'icon-append fa ' + iconClass"></i>
-        <input type="text" [name]="name" [placeholder]="placeHolder" />
-        <b *ngIf="toolTip" class="tooltip tooltip-bottom-right">{{toolTip}}</b>
-      </label>
-
-</form>
+<section>
+  <label #label class="input">
+    <i [className]="'icon-append fa ' + iconClass"></i>
+    <input [type]="type" [name]="name" [placeholder]="placeHolder" [(ngModel)]="value"/>
+    <b *ngIf="toolTip" class="tooltip tooltip-top-right">{{toolTip}}</b>
+  </label>
+</section>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'sa-sign.in',
@@ -19,8 +20,9 @@ export class SignInComponent implements OnInit {
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
-  login(email: string, password: string) {
-
+  onSubmit(form: NgForm) {
+    if (form.valid) {
+    }
   }
 
   private processResponse() {

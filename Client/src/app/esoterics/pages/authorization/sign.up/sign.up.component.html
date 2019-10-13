@@ -20,46 +20,49 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
           <div class="well no-padding">
 
-            <form id="smart-form-register" class="smart-form client-form">
-              <header> </header>
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" id="smart-form-register" class="smart-form client-form">
+              <header> Sign Up </header>
 
               <fieldset>
-                <section>
-                  <label class="input"> <i class="icon-append fa fa-envelope"></i>
-                    <input type="email" name="email" i18n-placeholder placeholder="{{'Email address' | i18n}}">
-                    <b class="tooltip tooltip-bottom-right">{{'Needed to verify your account' | i18n}}</b> </label>
-                </section>
-                <section>
-                  <label class="input"> <i class="icon-append fa fa-user"></i>
-                    <input type="text" name="firstname" i18n-placeholder placeholder="{{'First name' | i18n}}">
-                    <b class="tooltip tooltip-bottom-right">{{'Needed to enter the website' | i18n}}</b> </label>
-                </section>
-                <section>
-                  <label class="input"> <i class="icon-append fa fa-user"></i>
-                    <input type="text" name="lastname" i18n-placeholder placeholder="{{'Last name' | i18n}}">
-                    <b class="tooltip tooltip-bottom-right">{{'Needed to enter the website' | i18n}}</b> </label>
-                </section>
-                <section>
-                  <label class="input"> <i class="icon-append fa fa-lock"></i>
-                    <input type="password" name="password" i18n-placeholder placeholder="Password" id="password">
-                    <b class="tooltip tooltip-bottom-right">{{"Don't forget your password" | i18n}}</b> </label>
-                </section>
-                <section>
-                  <label class="input"> <i class="icon-append fa fa-lock"></i>
-                    <input type="password" name="passwordConfirm" i18n-placeholder placeholder="Confirm password">
-                    <b class="tooltip tooltip-bottom-right">{{"Don't forget your password" | i18n}}</b> </label>
-                </section>
 
-                <section>
-                  <label class="toggle">
-                    <input type="checkbox" name="checkbox-toggle" [checked]="isAdmin" (change)="isAdmin = !isAdmin">
-                    <i data-swchon-text="YES" data-swchoff-text="NO"></i>{{'Admin rights' | i18n}}</label>
-                </section>
+                <sa-text-box ngModel name="email" type="email" iconClass="fa-envelope"
+                  placeHolder="{{'Email address' | i18n}}" 
+                  toolTip="{{'Needed to verify your account' | i18n}}"
+                  [validationConfig]="emailValidation">
+                </sa-text-box>
+
+                <sa-text-box ngModel name="firstname" iconClass="fa-user"
+                  placeHolder="{{'First name' | i18n}}" 
+                  toolTip="{{'Needed to enter the website' | i18n}}"
+                  [validationConfig]="nameValidation">
+                </sa-text-box>
+
+                <sa-text-box ngModel name="lastname" iconClass="fa-user"
+                  placeHolder="{{'Last name' | i18n}}" 
+                  toolTip="{{'Needed to enter the website' | i18n}}"
+                  [validationConfig]="nameValidation">
+                </sa-text-box>
+
+                <sa-text-box ngModel name="password" type="password" iconClass="fa-lock"
+                  required
+                  placeHolder="Password"
+                  toolTip="{{'Don`t forget your password' | i18n}}">
+                </sa-text-box>
+
+                <sa-text-box ngModel name="passwordConfirm" type="password" iconClass="fa-lock"
+                  required
+                  placeHolder="Confirm Password"
+                  toolTip="{{'Confirm password' | i18n}}">
+                </sa-text-box>
 
               </fieldset>
 
               <footer>
-                <button (click)="register()" class="btn btn-primary">Register</button>
+                <button type="submit" 
+                [ngClass]="{'disabled': !(loginForm.form.valid && loginForm.form.touched)}" 
+                class="btn btn-primary"
+                [disabled]="!(loginForm.form.valid && loginForm.form.touched)"
+                class="btn btn-primary">Register</button>
               </footer>
 
             </form>

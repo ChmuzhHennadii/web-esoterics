@@ -58,7 +58,6 @@ input {
     padding-left: 3px;
     border-left-width: 1px;
     border-left-style: solid;
-    color: #A2A2A2;
     border-color: #BDBDBD;
     transition: border-color .3s;
     -o-transition: border-color .3s;
